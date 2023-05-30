@@ -1,47 +1,27 @@
 #include <stdio.h>
 
-int calculateArea(int length, int width) {
-    int area = length * width;
-    return area;
+float Tinhchuvihcn(float chieudai, float chieurong) {
+    float Chuvihcn = chieudai * chieurong;
+    return Chuvihcn;
 }
 
-int calculatePerimeter(int length, int width) {
-    int perimeter = 2 * (length + width);
-    return perimeter;
+float Tinhdientichhcn(float chieudai, float chieurong) {
+    float Dientichhcn = 2 * (chieudai + chieurong);
+    return Dientichhcn;
 }
 
 int main() {
-    int choice;
-    int length, width;
+    float chieudai, chieurong;
+    printf("Nhap chieu dai hinh chu nhat: ");
+    scanf("%f", &chieudai);
+    printf("Nhap chieu rong hinh chu nhat: ");
+    scanf("%f", &chieurong);
 
-    printf("1. Calculate area\n");
-    printf("2. Calculate perimeter\n");
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
+    float Chuvihcn = Tinhchuvihcn(chieudai, chieurong);
+    float Dientichhcn = Tinhdientichhcn(chieudai, chieurong);
 
-    switch (choice) {
-        case 1:
-            printf("Enter the length of the rectangle: ");
-            scanf("%f", &length);
-            printf("Enter the width of the rectangle: ");
-            scanf("%f", &width);
-            int area = calculateArea(length, width);
-            printf("Area of the rectangle: %.2f\n", area);
-            break;
-        case 2:
-            printf("Enter the length of the rectangle: ");
-            scanf("%f", &length);
-            printf("Enter the width of the rectangle: ");
-            scanf("%f", &width);
-            int perimeter = calculatePerimeter(length, width);
-            printf("Perimeter of the rectangle: %.2f\n", perimeter);
-            break;
-        }
-        default:
-            printf("Invalid choice\n");
-            break;
-    }
+    printf("Chi hinh chu nhat: %.2f\n", Chuvihcn);
+    printf("Dien tich hinh chu nhat: %.2f\n", Dientichhcn);
 
     return 0;
 }
-
